@@ -1,43 +1,16 @@
 @use 'reset';
 @use 'colors';
 @use 'grid';
+@use 'desktop';
+@use 'tablet';
+@use 'mobile';
 
 
-.item {
-    color: colors.$colorWhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-}
-
-.item5,
-.item6,
-.item7 {
-    color: colors.$colorBlack;
-}
 
 
-.item1{
-    background-color: colors.$colorHeader;
-}
-.item2{
-    background-color: colors.$colorMenu;
-}
-.item3{
-    background-color: colors.$colorHero;;
-}
-.item4{
-    background-color: colors.$colorMain;
-}
-.item5{
-    background-color: colors.$colorImage;
-}
-.item6{
-    background-color: colors.$colorExtra;
-}
-.item7{
-    background-color: colors.$colorBanner; 
-}
+
+
+
+
 
 

@@ -1,8 +1,76 @@
 @use 'colors';
-@use 'reset';
-
 
 .container{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    .item{
+        color: colors.$colorWhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+    }
+/* 
+    .item1{
+        background-color: colors.$colorHeader;
+        grid-area: header;
+    }
+    .item2{
+        background-color: colors.$colorMenu;
+        grid-area: menu;
+    }
+    .item3{
+        background-color: colors.$colorHero;
+        grid-area: hero;
+    }
+    .item4{
+        background-color: colors.$colorMain;
+        grid-area: main;
+    }
+    .item5{
+        background-color: colors.$colorImage;
+        grid-area: imagen;
+        color: colors.$colorBlack;
+    }
+    .item6{
+        background-color: colors.$colorExtra;
+        grid-area: extra;
+        color: colors.$colorBlack;
+    }
+    .item7{
+        background-color: colors.$colorBanner;
+        grid-area: banner; 
+        color: colors.$colorBlack;
+    } */
+
+    /* el "to" excluye el ultimo numero y el "through" lo incluye */
+
+    $colores:(
+        colors.$colorHeader,
+        colors.$colorMenu,
+        colors.$colorHero,
+        colors.$colorMain,
+        colors.$colorImage,
+        colors.$colorExtra,
+        colors.$colorBanner
+    );
+
+    @for $i from 1 through 7 {
+        .item#{$i}{
+        /*  background-color: hsl($i * 40, 100%, 50%);
+            color: colors.$colorBlack; */
+            background-color: nth($colores , $i );
+            /* border: thin solid white; */
+            grid-area: item#{$i};
+        }
+    }
+}
+
+
+/* .container{
     height: 100vh;
     display: grid;
     grid-template-rows: repeat(2, 1fr) repeat(2, 3fr) repeat(3, 2fr);
@@ -76,4 +144,4 @@
         grid-column: 1/5;
         grid-row: 7/8;
     }
-}
+} */
